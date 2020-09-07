@@ -15,7 +15,13 @@ The `JSON` scalar type represents JSON objects as specified by [ECMA-404](http:/
 scalar Json
 
 type Query {
-  ok: Boolean!
+  user(where: UserWhereUniqueInput!): User
+  users(after: UserWhereUniqueInput, before: UserWhereUniqueInput, first: Int, last: Int, orderBy: [UserOrderByInput!]): [User!]!
+}
+
+enum SortOrder {
+  asc
+  desc
 }
 
 type User {
@@ -23,4 +29,19 @@ type User {
   firstName: String!
   id: Int!
   lastName: String!
+}
+
+input UserOrderByInput {
+  createdAt: SortOrder
+  email: SortOrder
+  firstName: SortOrder
+  id: SortOrder
+  lastName: SortOrder
+  password: SortOrder
+  updatedAt: SortOrder
+}
+
+input UserWhereUniqueInput {
+  email: String
+  id: Int
 }
