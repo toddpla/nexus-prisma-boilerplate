@@ -1,0 +1,38 @@
+{
+  "name": "nexus-prisma-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nexus dev",
+    "build": "nexus build",
+    "start": "node .nexus/build/api",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "Todd Langford-Archer",
+  "license": "ISC",
+  "dependencies": {
+    "nexus": "^0.26.1",
+    "nexus-plugin-prisma": "^0.17.0"
+  },
+  "engines": {
+    "node": "12.x"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.13",
+    "@types/node": "^14.6.4",
+    "@types/pg": "^7.14.4",
+    "jest": "^26.4.2",
+    "jest-environment-node": "^26.3.0",
+    "nanoid": "^3.1.12",
+    "pg": "^8.3.3",
+    "ts-jest": "^26.3.0",
+    "typescript": "^4.0.2"
+  }
+}
